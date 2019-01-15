@@ -25,8 +25,8 @@ int main(int argc, char *argv[]) {
     VuePrincipale *maVuePrincipale= new VuePrincipale();
     maVuePrincipale -> show();
     
-    VueMeteo *maVueMeteo = new VueMeteo();
-    maVueMeteo->show();
+    //VueMeteo *maVueMeteo = new VueMeteo();
+    //maVueMeteo->show();
     
     
     

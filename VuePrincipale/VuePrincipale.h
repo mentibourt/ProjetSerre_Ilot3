@@ -26,10 +26,10 @@ public:
     virtual ~VuePrincipale();
 private:
     Ui::VuePrincipale widget;
-    VueMeteo meteo;
-    VueSerre serre;
-public  slots:
-    void addWidget();
+    VueMeteo *unemeteo;
+    VueSerre *uneserre;
+
+   
 };
 
 #endif /* _VUEPRINCIPALE_H */

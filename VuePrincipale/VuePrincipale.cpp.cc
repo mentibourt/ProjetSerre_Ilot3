@@ -15,18 +15,22 @@
 #include "VueMeteo.h"
 
 VuePrincipale::VuePrincipale() {
+    unemeteo = new VueMeteo();
     widget.setupUi(this);
+    widget.meteo->addWidget(unemeteo);
+    
+    uneserre = new VueSerre();
+    widget.setupUi(this);
+    widget.serre->addWidget(uneserre);
+    
+    
     
     
 }
-void VuePrincipale::addWidget(){
-auto layout = new QHBoxLayout;
-    setLayout(layout);
+
    
-        auto meteo = new QWidget;
-        layout->addWidget(meteo);
     
-}
+
 
 VuePrincipale::~VuePrincipale() {
 }
