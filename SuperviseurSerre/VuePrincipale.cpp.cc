@@ -5,17 +5,17 @@
  */
 
 /*
- * File:   newForm.cpp
+ * File:   VuePrincipale.cpp
  * Author: snir2g1
  *
- * Created on 15 janvier 2019, 17:23
+ * Created on 17 janvier 2019, 16:16
  */
 
-#include "newForm.h"
+#include "VuePrincipale.h"
 
-newForm::newForm() {
+VuePrincipale::VuePrincipale() {
     widget.setupUi(this);
 }
 
-newForm::~newForm() {
+VuePrincipale::~VuePrincipale() {
 }

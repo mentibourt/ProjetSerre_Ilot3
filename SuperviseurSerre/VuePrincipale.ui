@@ -1,6 +1,6 @@
 <ui version="4.0" >
- <class>newForm</class>
- <widget class="QWidget" name="newForm" >
+ <class>VuePrincipale</class>
+ <widget class="QWidget" name="VuePrincipale" >
   <property name="geometry" >
    <rect>
     <x>0</x>
@@ -10,7 +10,7 @@
    </rect>
   </property>
   <property name="windowTitle" >
-   <string>newForm</string>
+   <string>VuePrincipale</string>
   </property>
  </widget>
  <resources/>

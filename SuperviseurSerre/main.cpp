@@ -12,7 +12,7 @@
  */
 
 #include <QApplication>
-#include "newForm.h"
+#include "VuePrincipale.h"
 
 int main(int argc, char *argv[]) {
     // initialize resources, if needed
@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
 
     // create and show your widgets here
-    newForm *maVueSerre2 = new newForm() ;
+    VuePrincipale *maVueSerre2 = new VuePrincipale() ;
     maVueSerre2 -> show() ;
     return app.exec();
 }
