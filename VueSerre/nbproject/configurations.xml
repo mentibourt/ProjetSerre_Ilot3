@@ -30,6 +30,10 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <itemPath>../ClasseMetier/Observable.cpp</itemPath>
+    <itemPath>../ClasseMetier/Observable.h</itemPath>
+    <itemPath>../ClasseMetier/Observateur.cpp</itemPath>
+    <itemPath>../ClasseMetier/Observateur.h</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -47,6 +51,14 @@
       <item path="../ClasseMetier/InfoClimat.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../ClasseMetier/InfoClimat.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../ClasseMetier/Observable.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../ClasseMetier/Observable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../ClasseMetier/Observateur.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../ClasseMetier/Observateur.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="VueSerre.cpp.cc" ex="false" tool="1" flavor2="0">
       </item>
@@ -84,6 +96,14 @@
       <item path="../ClasseMetier/InfoClimat.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../ClasseMetier/InfoClimat.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../ClasseMetier/Observable.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../ClasseMetier/Observable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../ClasseMetier/Observateur.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../ClasseMetier/Observateur.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="VueSerre.cpp.cc" ex="false" tool="1" flavor2="0">
       </item>

@@ -13,8 +13,13 @@
 
 #include "VueSerre.h"
 
+
 VueSerre::VueSerre() {
     widget.setupUi(this);
+}
+
+VueSerre::VueSerre(InfoClimat* uneInfosClimat){
+    this->uneInfoClimat = uneInfosClimat;
 }
 
 VueSerre::~VueSerre() {

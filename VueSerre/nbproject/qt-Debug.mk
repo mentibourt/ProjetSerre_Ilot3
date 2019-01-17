@@ -33,7 +33,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = VueSerre1.0.0
-DISTDIR = /home/snir2g1/NetBeansProjects/VueSerre/build/Debug/GNU-Linux/VueSerre1.0.0
+DISTDIR = /home/snir2g1/Documents/projetSerre/ProjetSerre_Ilot3/VueSerre/build/Debug/GNU-Linux/VueSerre1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-rpath,/opt/Qt/5.7/gcc_64/lib
 LIBS          = $(SUBLIBS) -L/opt/Qt/5.7/gcc_64/lib -lQt5Widgets -L/usr/lib64 -lQt5Gui -lQt5Core -lGL -lpthread 
@@ -48,9 +48,15 @@ OBJECTS_DIR   = build/Debug/GNU-Linux/
 
 ####### Files
 
-SOURCES       = VueSerre.cpp.cc \
+SOURCES       = ../ClasseMetier/InfoClimat.cpp \
+		../ClasseMetier/Observable.cpp \
+		../ClasseMetier/Observateur.cpp \
+		VueSerre.cpp.cc \
 		main.cpp moc_VueSerre.cpp
-OBJECTS       = build/Debug/GNU-Linux/VueSerre.cpp.o \
+OBJECTS       = build/Debug/GNU-Linux/InfoClimat.o \
+		build/Debug/GNU-Linux/Observable.o \
+		build/Debug/GNU-Linux/Observateur.o \
+		build/Debug/GNU-Linux/VueSerre.cpp.o \
 		build/Debug/GNU-Linux/main.o \
 		build/Debug/GNU-Linux/moc_VueSerre.o
 DIST          = /opt/Qt/5.7/gcc_64/mkspecs/features/spec_pre.prf \
@@ -201,7 +207,13 @@ DIST          = /opt/Qt/5.7/gcc_64/mkspecs/features/spec_pre.prf \
 		/opt/Qt/5.7/gcc_64/mkspecs/features/exceptions.prf \
 		/opt/Qt/5.7/gcc_64/mkspecs/features/yacc.prf \
 		/opt/Qt/5.7/gcc_64/mkspecs/features/lex.prf \
-		nbproject/nbproject/qt-Debug.pro VueSerre.h VueSerre.cpp.cc \
+		nbproject/nbproject/qt-Debug.pro ../ClasseMetier/InfoClimat.h \
+		../ClasseMetier/Observable.h \
+		../ClasseMetier/Observateur.h \
+		VueSerre.h ../ClasseMetier/InfoClimat.cpp \
+		../ClasseMetier/Observable.cpp \
+		../ClasseMetier/Observateur.cpp \
+		VueSerre.cpp.cc \
 		main.cpp
 QMAKE_TARGET  = VueSerre
 DESTDIR       = dist/Debug/GNU-Linux/
@@ -534,8 +546,8 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents VueSerre.h $(DISTDIR)/
-	$(COPY_FILE) --parents VueSerre.cpp.cc main.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../ClasseMetier/InfoClimat.h ../ClasseMetier/Observable.h ../ClasseMetier/Observateur.h VueSerre.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../ClasseMetier/InfoClimat.cpp ../ClasseMetier/Observable.cpp ../ClasseMetier/Observateur.cpp VueSerre.cpp.cc main.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents VueSerre.ui $(DISTDIR)/
 
 
@@ -565,7 +577,10 @@ compiler_rcc_clean:
 compiler_moc_header_make_all: moc_VueSerre.cpp
 compiler_moc_header_clean:
 	-$(DEL_FILE) moc_VueSerre.cpp
-moc_VueSerre.cpp: ui_VueSerre.h \
+moc_VueSerre.cpp: ../ClasseMetier/InfoClimat.h \
+		../ClasseMetier/Observable.h \
+		../ClasseMetier/Observateur.h \
+		ui_VueSerre.h \
 		/opt/Qt/5.7/gcc_64/include/QtCore/QVariant \
 		/opt/Qt/5.7/gcc_64/include/QtCore/qvariant.h \
 		/opt/Qt/5.7/gcc_64/include/QtCore/qatomic.h \
@@ -712,7 +727,7 @@ moc_VueSerre.cpp: ui_VueSerre.h \
 		/opt/Qt/5.7/gcc_64/include/QtWidgets/QWidget \
 		VueSerre.h \
 		/opt/Qt/5.7/gcc_64/bin/moc
-	/opt/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/snir2g1/NetBeansProjects/VueSerre/nbproject -I/opt/Qt/5.7/gcc_64/include -I/opt/Qt/5.7/gcc_64/include/QtWidgets -I/opt/Qt/5.7/gcc_64/include/QtGui -I/opt/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/6.1.1 -I/usr/include/c++/6.1.1/x86_64-redhat-linux -I/usr/include/c++/6.1.1/backward -I/usr/lib/gcc/x86_64-redhat-linux/6.1.1/include -I/usr/local/include -I/usr/include VueSerre.h -o moc_VueSerre.cpp
+	/opt/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/snir2g1/Documents/projetSerre/ProjetSerre_Ilot3/VueSerre/nbproject -I/opt/Qt/5.7/gcc_64/include -I/opt/Qt/5.7/gcc_64/include/QtWidgets -I/opt/Qt/5.7/gcc_64/include/QtGui -I/opt/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/6.1.1 -I/usr/include/c++/6.1.1/x86_64-redhat-linux -I/usr/include/c++/6.1.1/backward -I/usr/lib/gcc/x86_64-redhat-linux/6.1.1/include -I/usr/local/include -I/usr/include VueSerre.h -o moc_VueSerre.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -733,7 +748,23 @@ compiler_clean: compiler_moc_header_clean compiler_uic_clean
 
 ####### Compile
 
+build/Debug/GNU-Linux/InfoClimat.o: ../ClasseMetier/InfoClimat.cpp ../ClasseMetier/InfoClimat.h \
+		../ClasseMetier/Observable.h \
+		../ClasseMetier/Observateur.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/Debug/GNU-Linux/InfoClimat.o ../ClasseMetier/InfoClimat.cpp
+
+build/Debug/GNU-Linux/Observable.o: ../ClasseMetier/Observable.cpp ../ClasseMetier/Observable.h \
+		../ClasseMetier/Observateur.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/Debug/GNU-Linux/Observable.o ../ClasseMetier/Observable.cpp
+
+build/Debug/GNU-Linux/Observateur.o: ../ClasseMetier/Observateur.cpp ../ClasseMetier/Observateur.h \
+		../ClasseMetier/Observable.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/Debug/GNU-Linux/Observateur.o ../ClasseMetier/Observateur.cpp
+
 build/Debug/GNU-Linux/VueSerre.cpp.o: VueSerre.cpp.cc VueSerre.h \
+		../ClasseMetier/InfoClimat.h \
+		../ClasseMetier/Observable.h \
+		../ClasseMetier/Observateur.h \
 		ui_VueSerre.h \
 		/opt/Qt/5.7/gcc_64/include/QtCore/QVariant \
 		/opt/Qt/5.7/gcc_64/include/QtCore/qvariant.h \
@@ -985,6 +1016,9 @@ build/Debug/GNU-Linux/main.o: main.cpp /opt/Qt/5.7/gcc_64/include/QtWidgets/QApp
 		/opt/Qt/5.7/gcc_64/include/QtGui/qguiapplication.h \
 		/opt/Qt/5.7/gcc_64/include/QtGui/qinputmethod.h \
 		VueSerre.h \
+		../ClasseMetier/InfoClimat.h \
+		../ClasseMetier/Observable.h \
+		../ClasseMetier/Observateur.h \
 		ui_VueSerre.h \
 		/opt/Qt/5.7/gcc_64/include/QtCore/QVariant \
 		/opt/Qt/5.7/gcc_64/include/QtWidgets/QAction \

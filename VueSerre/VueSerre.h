@@ -13,17 +13,19 @@
 
 #ifndef _VUESERRE_H
 #define _VUESERRE_H
-
+#include "../ClasseMetier/InfoClimat.h"
 #include "ui_VueSerre.h"
 
 class VueSerre : public QWidget {
     Q_OBJECT
 public:
     VueSerre();
+    VueSerre(InfoClimat* uneInfosClimat);
     virtual ~VueSerre();
     void mettreAjour();
 private:
     Ui::VueSerre widget;
+    InfoClimat *uneInfoClimat;
 };
 
 #endif /* _VUESERRE_H */
