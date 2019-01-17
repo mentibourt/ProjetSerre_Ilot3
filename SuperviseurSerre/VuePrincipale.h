@@ -8,11 +8,13 @@
  * File:   VuePrincipale.h
  * Author: snir2g1
  *
- * Created on 17 janvier 2019, 16:16
+ * Created on 20 décembre 2018, 17:42
  */
 
 #ifndef _VUEPRINCIPALE_H
 #define _VUEPRINCIPALE_H
+#include "VueMeteo.h"
+#include "VueSerre.h"
 
 #include "ui_VuePrincipale.h"
 
@@ -20,9 +22,14 @@ class VuePrincipale : public QWidget {
     Q_OBJECT
 public:
     VuePrincipale();
+   
     virtual ~VuePrincipale();
 private:
     Ui::VuePrincipale widget;
+    VueMeteo *unemeteo;
+    VueSerre *uneserre[2];
+
+   
 };
 
 #endif /* _VUEPRINCIPALE_H */

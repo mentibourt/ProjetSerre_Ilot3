@@ -13,6 +13,8 @@
 
 #include <QApplication>
 #include "VuePrincipale.h"
+#include "VueSerre.h"
+
 
 int main(int argc, char *argv[]) {
     // initialize resources, if needed
@@ -21,7 +23,9 @@ int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
 
     // create and show your widgets here
-    VuePrincipale *maVueSerre2 = new VuePrincipale() ;
-    maVueSerre2 -> show() ;
+   
+    VuePrincipale *maVuePrincipale = new VuePrincipale();
+    maVuePrincipale -> show() ;
+    
     return app.exec();
 }
