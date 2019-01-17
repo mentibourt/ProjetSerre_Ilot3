@@ -22,6 +22,7 @@ public:
     VueSerre();
     virtual ~VueSerre();
 private:
+    
     Ui::VueSerre widget;
 };
 

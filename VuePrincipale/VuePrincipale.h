@@ -27,7 +27,7 @@ public:
 private:
     Ui::VuePrincipale widget;
     VueMeteo *unemeteo;
-    VueSerre *uneserre;
+    VueSerre *uneserre[2];
 
    
 };

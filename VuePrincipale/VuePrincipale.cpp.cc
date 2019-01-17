@@ -19,9 +19,16 @@ VuePrincipale::VuePrincipale() {
     widget.setupUi(this);
     widget.meteo->addWidget(unemeteo);
     
-    uneserre = new VueSerre();
+    uneserre[0] = new VueSerre();
     widget.setupUi(this);
-    widget.serre->addWidget(uneserre);
+    widget.serre->addWidget(uneserre[0]);
+    
+    uneserre[1]= new VueSerre(); 
+    widget.serre->addWidget(uneserre[1]);
+    
+    uneserre[2] = new VueSerre();
+    widget.serre->addWidget(uneserre[2]);
+    
     
     
     
