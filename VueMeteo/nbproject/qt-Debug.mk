@@ -48,10 +48,14 @@ OBJECTS_DIR   = build/Debug/GNU-Linux/
 
 ####### Files
 
-SOURCES       = BulletinMeteo.cpp \
+SOURCES       = ../ClasseMetier/BulletinMeteo.cpp \
+		../ClasseMetier/Observable.cpp \
+		../ClasseMetier/Observateur.cpp \
 		VueMeteo.cpp.cc \
 		main.cpp moc_VueMeteo.cpp
 OBJECTS       = build/Debug/GNU-Linux/BulletinMeteo.o \
+		build/Debug/GNU-Linux/Observable.o \
+		build/Debug/GNU-Linux/Observateur.o \
 		build/Debug/GNU-Linux/VueMeteo.cpp.o \
 		build/Debug/GNU-Linux/main.o \
 		build/Debug/GNU-Linux/moc_VueMeteo.o
@@ -203,8 +207,12 @@ DIST          = /opt/Qt/5.7/gcc_64/mkspecs/features/spec_pre.prf \
 		/opt/Qt/5.7/gcc_64/mkspecs/features/exceptions.prf \
 		/opt/Qt/5.7/gcc_64/mkspecs/features/yacc.prf \
 		/opt/Qt/5.7/gcc_64/mkspecs/features/lex.prf \
-		nbproject/nbproject/qt-Debug.pro BulletinMeteo.h \
-		VueMeteo.h BulletinMeteo.cpp \
+		nbproject/nbproject/qt-Debug.pro ../ClasseMetier/BulletinMeteo.h \
+		../ClasseMetier/Observable.h \
+		../ClasseMetier/Observateur.h \
+		VueMeteo.h ../ClasseMetier/BulletinMeteo.cpp \
+		../ClasseMetier/Observable.cpp \
+		../ClasseMetier/Observateur.cpp \
 		VueMeteo.cpp.cc \
 		main.cpp
 QMAKE_TARGET  = VueMeteo
@@ -538,8 +546,8 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents BulletinMeteo.h VueMeteo.h $(DISTDIR)/
-	$(COPY_FILE) --parents BulletinMeteo.cpp VueMeteo.cpp.cc main.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../ClasseMetier/BulletinMeteo.h ../ClasseMetier/Observable.h ../ClasseMetier/Observateur.h VueMeteo.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../ClasseMetier/BulletinMeteo.cpp ../ClasseMetier/Observable.cpp ../ClasseMetier/Observateur.cpp VueMeteo.cpp.cc main.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents VueMeteo.ui $(DISTDIR)/
 
 
@@ -715,6 +723,9 @@ moc_VueMeteo.cpp: ui_VueMeteo.h \
 		/opt/Qt/5.7/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt/5.7/gcc_64/include/QtWidgets/QVBoxLayout \
 		/opt/Qt/5.7/gcc_64/include/QtWidgets/QWidget \
+		../ClasseMetier/Observable.h \
+		../ClasseMetier/Observateur.h \
+		../ClasseMetier/BulletinMeteo.h \
 		VueMeteo.h \
 		/opt/Qt/5.7/gcc_64/bin/moc
 	/opt/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/snir2g1/Documents/tpSerre/ProjetSerre_Ilot3/VueMeteo/nbproject -I/opt/Qt/5.7/gcc_64/include -I/opt/Qt/5.7/gcc_64/include/QtWidgets -I/opt/Qt/5.7/gcc_64/include/QtGui -I/opt/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/6.1.1 -I/usr/include/c++/6.1.1/x86_64-redhat-linux -I/usr/include/c++/6.1.1/backward -I/usr/lib/gcc/x86_64-redhat-linux/6.1.1/include -I/usr/local/include -I/usr/include VueMeteo.h -o moc_VueMeteo.cpp
@@ -738,8 +749,18 @@ compiler_clean: compiler_moc_header_clean compiler_uic_clean
 
 ####### Compile
 
-build/Debug/GNU-Linux/BulletinMeteo.o: BulletinMeteo.cpp BulletinMeteo.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/Debug/GNU-Linux/BulletinMeteo.o BulletinMeteo.cpp
+build/Debug/GNU-Linux/BulletinMeteo.o: ../ClasseMetier/BulletinMeteo.cpp ../ClasseMetier/BulletinMeteo.h \
+		../ClasseMetier/Observable.h \
+		../ClasseMetier/Observateur.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/Debug/GNU-Linux/BulletinMeteo.o ../ClasseMetier/BulletinMeteo.cpp
+
+build/Debug/GNU-Linux/Observable.o: ../ClasseMetier/Observable.cpp ../ClasseMetier/Observable.h \
+		../ClasseMetier/Observateur.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/Debug/GNU-Linux/Observable.o ../ClasseMetier/Observable.cpp
+
+build/Debug/GNU-Linux/Observateur.o: ../ClasseMetier/Observateur.cpp ../ClasseMetier/Observateur.h \
+		../ClasseMetier/Observable.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/Debug/GNU-Linux/Observateur.o ../ClasseMetier/Observateur.cpp
 
 build/Debug/GNU-Linux/VueMeteo.cpp.o: VueMeteo.cpp.cc VueMeteo.h \
 		ui_VueMeteo.h \
@@ -887,7 +908,10 @@ build/Debug/GNU-Linux/VueMeteo.cpp.o: VueMeteo.cpp.cc VueMeteo.h \
 		/opt/Qt/5.7/gcc_64/include/QtGui/qpen.h \
 		/opt/Qt/5.7/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt/5.7/gcc_64/include/QtWidgets/QVBoxLayout \
-		/opt/Qt/5.7/gcc_64/include/QtWidgets/QWidget
+		/opt/Qt/5.7/gcc_64/include/QtWidgets/QWidget \
+		../ClasseMetier/Observable.h \
+		../ClasseMetier/Observateur.h \
+		../ClasseMetier/BulletinMeteo.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/Debug/GNU-Linux/VueMeteo.cpp.o VueMeteo.cpp.cc
 
 build/Debug/GNU-Linux/main.o: main.cpp /opt/Qt/5.7/gcc_64/include/QtWidgets/QApplication \
@@ -1036,7 +1060,10 @@ build/Debug/GNU-Linux/main.o: main.cpp /opt/Qt/5.7/gcc_64/include/QtWidgets/QApp
 		/opt/Qt/5.7/gcc_64/include/QtGui/qpen.h \
 		/opt/Qt/5.7/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt/5.7/gcc_64/include/QtWidgets/QVBoxLayout \
-		/opt/Qt/5.7/gcc_64/include/QtWidgets/QWidget
+		/opt/Qt/5.7/gcc_64/include/QtWidgets/QWidget \
+		../ClasseMetier/Observable.h \
+		../ClasseMetier/Observateur.h \
+		../ClasseMetier/BulletinMeteo.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/Debug/GNU-Linux/main.o main.cpp
 
 build/Debug/GNU-Linux/moc_VueMeteo.o: moc_VueMeteo.cpp 
