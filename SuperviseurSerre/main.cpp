@@ -8,27 +8,24 @@
  * File:   main.cpp
  * Author: snir2g1
  *
- * Created on 20 décembre 2018, 17:32
+ * Created on 20 décembre 2018, 17:54
  */
 
 #include <QApplication>
 #include "VuePrincipale.h"
 #include "VueSerre.h"
-#include "VueMeteo.h"
+
 
 int main(int argc, char *argv[]) {
     // initialize resources, if needed
     // Q_INIT_RESOURCE(resfile);
-    
+
     QApplication app(argc, argv);
+
     // create and show your widgets here
-    VuePrincipale *maVuePrincipale= new VuePrincipale();
-    maVuePrincipale -> show();
-    
-    //VueMeteo *maVueMeteo = new VueMeteo();
-    //maVueMeteo->show();
-    
-    
+   
+    VuePrincipale *maVuePrincipale = new VuePrincipale();
+    maVuePrincipale -> show() ;
     
     return app.exec();
 }

@@ -33,7 +33,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = VuePrincipale1.0.0
-DISTDIR = /home/snir2g1/NetBeansProjects/VuePrincipale/build/Debug/GNU-Linux/VuePrincipale1.0.0
+DISTDIR = /home/snir2g1/NetBeansProjects/ProjetSerre_Ilot3/VuePrincipale/build/Debug/GNU-Linux/VuePrincipale1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-rpath,/opt/Qt/5.7/gcc_64/lib
 LIBS          = $(SUBLIBS) -L/opt/Qt/5.7/gcc_64/lib -lQt5Widgets -L/usr/lib64 -lQt5Gui -lQt5Core -lGL -lpthread 
@@ -725,7 +725,7 @@ moc_VueMeteo.cpp: ui_VueMeteo.h \
 		/opt/Qt/5.7/gcc_64/include/QtWidgets/QWidget \
 		VueMeteo.h \
 		/opt/Qt/5.7/gcc_64/bin/moc
-	/opt/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/snir2g1/NetBeansProjects/VuePrincipale/nbproject -I/opt/Qt/5.7/gcc_64/include -I/opt/Qt/5.7/gcc_64/include/QtWidgets -I/opt/Qt/5.7/gcc_64/include/QtGui -I/opt/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/6.1.1 -I/usr/include/c++/6.1.1/x86_64-redhat-linux -I/usr/include/c++/6.1.1/backward -I/usr/lib/gcc/x86_64-redhat-linux/6.1.1/include -I/usr/local/include -I/usr/include VueMeteo.h -o moc_VueMeteo.cpp
+	/opt/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/snir2g1/NetBeansProjects/ProjetSerre_Ilot3/VuePrincipale/nbproject -I/opt/Qt/5.7/gcc_64/include -I/opt/Qt/5.7/gcc_64/include/QtWidgets -I/opt/Qt/5.7/gcc_64/include/QtGui -I/opt/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/6.1.1 -I/usr/include/c++/6.1.1/x86_64-redhat-linux -I/usr/include/c++/6.1.1/backward -I/usr/lib/gcc/x86_64-redhat-linux/6.1.1/include -I/usr/local/include -I/usr/include VueMeteo.h -o moc_VueMeteo.cpp
 
 moc_VuePrincipale.cpp: VueMeteo.h \
 		ui_VueMeteo.h \
@@ -880,7 +880,7 @@ moc_VuePrincipale.cpp: VueMeteo.h \
 		ui_VuePrincipale.h \
 		VuePrincipale.h \
 		/opt/Qt/5.7/gcc_64/bin/moc
-	/opt/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/snir2g1/NetBeansProjects/VuePrincipale/nbproject -I/opt/Qt/5.7/gcc_64/include -I/opt/Qt/5.7/gcc_64/include/QtWidgets -I/opt/Qt/5.7/gcc_64/include/QtGui -I/opt/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/6.1.1 -I/usr/include/c++/6.1.1/x86_64-redhat-linux -I/usr/include/c++/6.1.1/backward -I/usr/lib/gcc/x86_64-redhat-linux/6.1.1/include -I/usr/local/include -I/usr/include VuePrincipale.h -o moc_VuePrincipale.cpp
+	/opt/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/snir2g1/NetBeansProjects/ProjetSerre_Ilot3/VuePrincipale/nbproject -I/opt/Qt/5.7/gcc_64/include -I/opt/Qt/5.7/gcc_64/include/QtWidgets -I/opt/Qt/5.7/gcc_64/include/QtGui -I/opt/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/6.1.1 -I/usr/include/c++/6.1.1/x86_64-redhat-linux -I/usr/include/c++/6.1.1/backward -I/usr/lib/gcc/x86_64-redhat-linux/6.1.1/include -I/usr/local/include -I/usr/include VuePrincipale.h -o moc_VuePrincipale.cpp
 
 moc_VueSerre.cpp: ui_VueSerre.h \
 		/opt/Qt/5.7/gcc_64/include/QtCore/QVariant \
@@ -1029,7 +1029,7 @@ moc_VueSerre.cpp: ui_VueSerre.h \
 		/opt/Qt/5.7/gcc_64/include/QtWidgets/QWidget \
 		VueSerre.h \
 		/opt/Qt/5.7/gcc_64/bin/moc
-	/opt/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/snir2g1/NetBeansProjects/VuePrincipale/nbproject -I/opt/Qt/5.7/gcc_64/include -I/opt/Qt/5.7/gcc_64/include/QtWidgets -I/opt/Qt/5.7/gcc_64/include/QtGui -I/opt/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/6.1.1 -I/usr/include/c++/6.1.1/x86_64-redhat-linux -I/usr/include/c++/6.1.1/backward -I/usr/lib/gcc/x86_64-redhat-linux/6.1.1/include -I/usr/local/include -I/usr/include VueSerre.h -o moc_VueSerre.cpp
+	/opt/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/snir2g1/NetBeansProjects/ProjetSerre_Ilot3/VuePrincipale/nbproject -I/opt/Qt/5.7/gcc_64/include -I/opt/Qt/5.7/gcc_64/include/QtWidgets -I/opt/Qt/5.7/gcc_64/include/QtGui -I/opt/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/6.1.1 -I/usr/include/c++/6.1.1/x86_64-redhat-linux -I/usr/include/c++/6.1.1/backward -I/usr/lib/gcc/x86_64-redhat-linux/6.1.1/include -I/usr/local/include -I/usr/include VueSerre.h -o moc_VueSerre.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:

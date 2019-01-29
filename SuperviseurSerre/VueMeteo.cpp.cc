@@ -16,8 +16,8 @@ using namespace std;
 
 VueMeteo::VueMeteo() {
     widget.setupUi(this);
+    mettreAJour();
 }
-
 
 VueMeteo::~VueMeteo() {
 }
@@ -26,7 +26,4 @@ void VueMeteo::mettreAJour(){
     widget.temperature->setText("200");  
     widget.vitesseVent->setText("26");
     
-}
-VueMeteo::VueMeteo(BulletinMeteo* unBulletinMeteo) {
-    dernierBulletinMeteo = unBulletinMeteo;
 }
